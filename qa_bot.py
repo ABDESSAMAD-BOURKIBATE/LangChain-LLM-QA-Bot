@@ -54,9 +54,9 @@ class PDFQABot:
                 "or pass it to the constructor."
             )
         
-        self.model_name = model_name or os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
-        self.embedding_model = embedding_model or os.getenv("EMBEDDING_MODEL", "text-embedding-ada-002")
-        self.chroma_db_dir = chroma_db_dir or os.getenv("CHROMA_DB_DIR", "./chroma_db")
+        self.model_name = model_name if model_name is not None else os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
+        self.embedding_model = embedding_model if embedding_model is not None else os.getenv("EMBEDDING_MODEL", "text-embedding-ada-002")
+        self.chroma_db_dir = chroma_db_dir if chroma_db_dir is not None else os.getenv("CHROMA_DB_DIR", "./chroma_db")
         
         # Initialize components
         self.embeddings = OpenAIEmbeddings(
@@ -148,14 +148,13 @@ class PDFQABot:
             )
         
         # Create custom prompt template
-        prompt_template = """Use the following pieces of context to answer the question at the end. 
-        If you don't know the answer, just say that you don't know, don't try to make up an answer.
-        
-        Context: {context}
-        
-        Question: {question}
-        
-        Answer:"""
+        prompt_template = """Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
+
+Context: {context}
+
+Question: {question}
+
+Answer:"""
         
         PROMPT = PromptTemplate(
             template=prompt_template,
