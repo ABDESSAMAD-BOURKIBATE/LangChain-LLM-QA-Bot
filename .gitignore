@@ -144,6 +144,11 @@ ENV/
 env.bak/
 venv.bak/
 
+# ChromaDB vector store
+chroma_db/
+custom_chroma_db/
+*.db
+
 # Spyder project settings
 .spyderproject
 .spyproject
