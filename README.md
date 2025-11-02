@@ -108,8 +108,7 @@ The final answer is concise, context-aware, and grounded in the original documen
 👨‍💻 Author
 Abdessamad Bourkibate
 IBM Certified in AI Engineering with Python, PyTorch & TensorFlow
-🔗 LinkedIn
-🌐 GitHub
+
 
 📜 License
 This project is licensed under the MIT License — see the LICENSE file for details.
