@@ -49,25 +49,24 @@ produce precise responses through a natural language interface.
 
 Clone the repository:
 ```bash
+
 git clone https://github.com/ABDESSAMAD-BOURKIBATE/LangChain-LLM-QA-Bot.git
 cd LangChain-LLM-QA-Bot
 Install dependencies:
 
-bash
-Copy code
+
 pip install -r requirements.txt
 Open the project in Google Colab or Jupyter Notebook:
 
-bash
-Copy code
+
 jupyter notebook QA_Bot_LangChain_LLM.ipynb
 Or run directly from Colab:
 
 
 
 🧩 Folder Structure
-bash
-Copy code
+
+
 LangChain-LLM-QA-Bot/
 │
 ├── QA_Bot_LangChain_LLM.ipynb   # Main Colab notebook
@@ -76,6 +75,9 @@ LangChain-LLM-QA-Bot/
 ├── README.md                     # Project documentation
 └── data/                         # (Optional) Folder for uploaded PDFs
 🧠 How It Works
+
+
+
 Document Ingestion:
 PDFs are uploaded and parsed into text segments.
 
